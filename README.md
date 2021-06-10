@@ -6,3 +6,7 @@ multer package manager
 #### To run this app
 - `npm install`
 - `npm run dev`
+-
+
+
+![image](https://github.com/samirbiswas/file-upload-with-multer/blob/master/postman.png)
