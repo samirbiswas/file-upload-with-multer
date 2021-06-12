@@ -14,7 +14,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(route)
+app.use(route);
+// global error handler
+app.use(function (err, req, res, next) {
+  res.status(500).send(err.message)
+})
 app.listen(PORT, () => {
   console.log(`server run of ${PORT}`);
 })

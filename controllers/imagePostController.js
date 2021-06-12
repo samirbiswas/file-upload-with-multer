@@ -1,15 +1,32 @@
-
-
-exports.uploadImage = (req, res) => {
+// single image controller
+exports.singleUploadImage = (req, res) => {
   try {
-    const { name } = req.body;
+    //const { name } = req.body;
     return res.json({
-      message: 'image uploaded successfully',
+      message: 'Image uploaded successfully',
       image: req.file,
-      name
+
     })
   } catch (error) {
-    console.log(error);
+    return res.json({
+      error: error.message
+    })
+  }
+}
+// multiple image controller
+exports.multipleUploadImage = (req, res) => {
+  try {
+
+    //const { name } = req.body;
+    return res.json({
+      message: 'Images uploaded successfully',
+      image: req.file,
+
+    })
+  } catch (error) {
+    return res.json({
+      error: error.message
+    })
   }
 }
 
